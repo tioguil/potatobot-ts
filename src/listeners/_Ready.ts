@@ -1,5 +1,6 @@
 import { Client } from 'discord.js';
 import { RegisteredCommands } from '../command/RegisteredCommands';
+import refreshingCommands from './RefreshingCommands';
 
 export default (client: Client): void => {
   client.on('ready', async () => {
@@ -8,6 +9,7 @@ export default (client: Client): void => {
         return;
       }
       console.log(`[Registering the commands]`);
+      // await refreshingCommands();
       RegisteredCommands.forEach((c) => console.log(`- ${c.name}`));
       await client.application.commands.set(RegisteredCommands);
       console.log(`[Registered commands]\n`);

@@ -17,7 +17,7 @@ const handleSlashCommand = async (client: ClientDiscord, interaction: CommandInt
 
   if (!slashCommand) {
     console.error('Command not found');
-    interaction.followUp({ content: 'An error has occurred' });
+    await interaction.followUp({ content: 'An error has occurred' });
     return;
   }
 

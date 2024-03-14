@@ -1,5 +1,5 @@
 import { Command } from '../../domains/Command';
-import { Client, CommandInteraction, GuildMember } from 'discord.js';
+import { CommandInteraction, GuildMember } from 'discord.js';
 import ClientDiscord from '../../domains/ClientDiscord';
 
 export const Play: Command = {
@@ -46,7 +46,7 @@ export const Play: Command = {
 
     await interaction.followUp({
       ephemeral: true,
-      content: 'Oba',
+      content: `Now playing`,
     });
   },
 };
